@@ -1,0 +1,22 @@
+/*Function yarating u Array ([]) qabul qilsin. function eng kichik va eng katta
+ qiymatini array ichida qaytarsin. [kichik, katta]*/
+
+ function minMax(arr) {
+    if (arr.length === 0) {
+        return []; 
+    }
+    var smallest = arr[0];
+    var largest = arr[0];
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        } else if (arr[i] > largest) {
+            largest = arr[i];
+        }
+    }
+    
+    return [smallest, largest];
+}
+console.log(minMax([1, 2, 3, 4, 5]));      
+console.log(minMax([2334454, 5]));          
+console.log(minMax([]));                   
